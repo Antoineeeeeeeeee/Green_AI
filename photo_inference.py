@@ -4,8 +4,8 @@ import cv2
 
 # Directory and file paths
 PHOTOS_DIR = 'photos'
-photo_path = str(Path(PHOTOS_DIR) / 'GettyImages-1287574718-scaled.jpg')
-path_out = str(Path(PHOTOS_DIR) / 'n3.jpg')
+photo_path = str(Path(PHOTOS_DIR) / 'number_6.jpg')
+path_out = str(Path(PHOTOS_DIR) / 'n6.jpg')
 
 # Load image
 img = cv2.imread(photo_path)
@@ -15,7 +15,7 @@ img = cv2.imread(photo_path)
 model_path = 'weights/best.pt'
 model = YOLO(model_path)
 
-threshold = 0.5
+threshold = 0.15
 
 # Run YOLO on the image
 results = model(img)[0]
